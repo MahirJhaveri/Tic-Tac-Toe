@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const http = require('http').Server(app);
-const io = require('socket.io')(http);
+const io = require('socket.io')(http, {'pingInterval': 6000, 'pingTimeout': 5000});
 const fs = require('fs');
 const cookieParser = require('cookie-parser');
 const ioCookieParser = require('socket.io-cookie');
@@ -98,7 +98,7 @@ function assign_symbols(player1_uid, player2_uid){
 }
 
 // EDIT - removed reassigning opponents part
-function handle_disconnection(uid, name){
+function handle_disconnection(uid, name, reason){
   if(active_players[uid]['status'] === "in-game"){
     var opponent_uid = active_players[uid]['opponent_uid'];
     active_players[opponent_uid]['status'] = "game over";
@@ -110,7 +110,7 @@ function handle_disconnection(uid, name){
     ready_players.pop();
   }
   active_players[uid] = undefined;
-  console.log(name + " disconnected.");
+  console.log(name + " disconnected. Reason - " + reason);
 }
 
 // Routing Methods
@@ -172,9 +172,9 @@ io.on("connection", function(socket){
     var opponents_uid = active_players[player_uid]['opponent_uid'];
     active_players[opponents_uid]['socket'].emit("draw", move);
   })
-  socket.on("disconnect", function(){
+  socket.on("disconnect", function(reason){
     socket.emit("holy shit");
-    handle_disconnection(player_uid, player_name);
+    handle_disconnection(player_uid, player_name, reason);
   });
 })
 
