@@ -4,7 +4,7 @@ An online, multiplayer, highly responsive version of the popular Tic Tac Toe gam
 
 
 ## What is this?
-This is an open sourced version of the code I plan to get up, running and live on the internet.
+This is an open sourced version of the code I plan to get up, and live on the internet.
 
 
 
