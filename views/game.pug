@@ -1,0 +1,59 @@
+<html>
+<head>
+
+  <title>Tic Tac Toe</title>
+
+  <!-- For Responsiveness of the page -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="/game_styles.css">
+
+  <!-- Jquery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <!-- Popper.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <!-- Bootstrap -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- Socket.io -->
+  <script src="/socket.io/socket.io.js"></script>
+
+  <!-- Game Script -->
+  <script src="/gameScript.js"></script>
+
+</head>
+<body>
+  <div class="container-fluid">
+  <div class="status-bar">Not Connected to Server</div>
+  <p class="page-header">
+    h1= message
+  </p>
+  <h3>Opponent : <span class="opponent-name">AAA</span></h3>
+  <h2 class="game-status"></h2>
+  <table id='grid' visibility='hidden' class="mb-4">
+    <tr>
+      <td><button id="1" class="square btn" onclick="changeState(this)">A</button></td>
+      <td><button id="2" class="square btn" onclick="changeState(this)">A</button></td>
+      <td><button id="3" class="square btn" onclick="changeState(this)">A</button></td>
+    </tr>
+    <tr>
+      <td><button id="4" class="square btn" onclick="changeState(this)"> </button></td>
+      <td><button id="5" class="square btn" onclick="changeState(this)"> </button></td>
+      <td><button id="6" class="square btn" onclick="changeState(this)"> </button></td>
+    </tr>
+    <tr>
+      <td><button id="7" class="square btn" onclick="changeState(this)"> </button></td>
+      <td><button id="8" class="square btn" onclick="changeState(this)"> </button></td>
+      <td><button id="9" class="square btn" onclick="changeState(this)"> </button></td>
+    </tr>
+  </table>
+  <div id="play-again" style="visibility:hidden;">
+    <button class="btn btn-danger" onclick="reload_page()">Play another game!</button>
+  </div>
+</div>
+</body>
+</html>
