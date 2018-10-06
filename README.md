@@ -11,7 +11,7 @@ Currently, live at www.xand0.site
 
 
 ## How to run this?
-This repo can be cloned and immediately executed on the localhost(3000) without any changes, of course after npm installing the dependencies.
+This repository can be cloned and immediately executed on the localhost:3000 without any changes, of course after using npm to install the dependencies.
 But in order to make it accessible to anyone on the same network, you'll have to make a few changes in the code:
 1. Change the PORT variable in signup-script.js to have your local ip address.
 2. Change the script src attribute to "http://{your local ip}:3000/signup-script.js"
