@@ -1,4 +1,4 @@
-
+// Unnecessary at this point - not used anywhere
 function change_connect_status(connected){
   if(connected){
     $('.status-bar').text("Connected to Server");

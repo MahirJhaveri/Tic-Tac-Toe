@@ -23,7 +23,7 @@ function check_with_server(name){
       console.log(obj);
       if(messageStatus == 1){
         //alert("You're all set!");
-        window.location = "http://" + PORT + ":8000/game";
+        window.location = "http://" + PORT + ":3000/game";
         return true;
       }
       else{

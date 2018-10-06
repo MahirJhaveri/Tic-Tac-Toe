@@ -13,6 +13,9 @@
   <!-- CSS for sign-up form-->
   <link rel="stylesheet" href="/signup.css">
 
+  <!-- Emoji CSS -->
+  <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+
   <!-- Jquery -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <!-- Popper.js -->
@@ -21,20 +24,22 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
   <!-- JS for sign-up form-->
-  <script src="http://localhost:8000/signup-script.js"></script>
+  <script src="http://localhost:3000/signup-script.js"></script>
 </head>
 <body>
   <div class="container pt-2">
-    <h1 class="page-header">What's our hero's name?</h1>
+    <h1 class="page-header">Create your Avatar <i class="em em-pig"></i> <i class="em em-sleuth_or_spy"></i> <i class="em em-space_invader"></i></h1>
     <hr class="mb-5">
     <h2 class="mb-3">
       Enter your avatar's name.
     </h2>
-    <form id="signup-form">
-      <label for="name"><strong>Name</strong></label>
+    <form id="signup-form" class="mb-5">
     <input type="text" class="form-control mb-3" id="name" aria-describedby="emailHelp" placeholder="Enter a player name" name="name">
-      <input class="btn btn-primary" type="button" value="Lets Go!!!" onClick="validate_name()">
+      <button class="btn btn-primary" type="button" onClick="validate_name()">Let's Go <i class="em em-video_game"></i></button>
     </form>
+    <div class="alert alert-info">
+      This game loves cookies <i class="em em-cookie"></i>, please enable them!
+    </div>
   </div>
 </body>
 </html>

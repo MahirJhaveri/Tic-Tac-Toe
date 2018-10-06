@@ -7,6 +7,8 @@ const cookieParser = require('cookie-parser');
 const ioCookieParser = require('socket.io-cookie');
 const pug = require('pug');
 
+const PORT = 3000
+
 app.use(express.static('Assets'));
 app.use(express.static('Src'));
 app.use(express.static('styles'));
@@ -50,6 +52,9 @@ function val_in_arr(val, arr){
 // Put in separate module later...
 function handle_new_connection(socket){
   var cookies = socket.request.headers.cookie;
+  if(!cookies){ //If the cookies do not exist then disconnect immidiately
+    socket.disconnect()
+  }
   var name = cookies.name;
   var uid = socket.id; //Can be used as a unique id for a player as it is unique for each session. Name is not unique.
   active_players[uid] = {
@@ -178,6 +183,6 @@ io.on("connection", function(socket){
   });
 })
 
-http.listen(8000, function(){
-  console.log("App listening on port 8000.");
+http.listen(PORT, function(){
+  console.log("App listening on port " + PORT);
 })
