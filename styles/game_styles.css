@@ -11,7 +11,14 @@
   font-size: 50;
   background-color: #fbfbfb;
 }
-table {
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#grid {
   background: white;
   width: 60vh;
   height: 60vh;
