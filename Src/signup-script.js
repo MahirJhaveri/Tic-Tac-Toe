@@ -36,3 +36,19 @@ function check_with_server(name){
   xhttp.open("GET", "check_name?name=" + name, false);
   xhttp.send();
 }
+
+
+function test(){
+  console.log("Width = " + $('.test span').width() + ".");
+  console.log("Width of parent = " + $('.test').parent().width() + ".");
+  let parent_width = $('.test').parent().width();
+  let em_width = $('.test span').width();
+  let count = parent_width/em_width;
+  let str = ""
+  for(var i = 1; i < count; i++){
+    str += '<span><i class="em em-monkey"></i><i class="em em-banana"></i></span>';
+  }
+  $('.test').html(str);
+}
+
+$(document).ready(test);

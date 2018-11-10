@@ -34,11 +34,12 @@
   </p>
   <h3>Opponent : <span class="opponent-name">AAA</span></h3>
   <h2 class="game-status"></h2>
+  <div class="container">
   <table id='grid' visibility='hidden' class="mb-4">
     <tr>
-      <td><button id="1" class="square btn" onclick="changeState(this)">A</button></td>
-      <td><button id="2" class="square btn" onclick="changeState(this)">A</button></td>
-      <td><button id="3" class="square btn" onclick="changeState(this)">A</button></td>
+      <td><button id="1" class="square btn" onclick="changeState(this)"> </button></td>
+      <td><button id="2" class="square btn" onclick="changeState(this)"> </button></td>
+      <td><button id="3" class="square btn" onclick="changeState(this)"> </button></td>
     </tr>
     <tr>
       <td><button id="4" class="square btn" onclick="changeState(this)"> </button></td>
@@ -51,6 +52,7 @@
       <td><button id="9" class="square btn" onclick="changeState(this)"> </button></td>
     </tr>
   </table>
+</div>
   <div id="play-again" style="visibility:hidden;">
     <button class="btn btn-danger" onclick="reload_page()">Play another game!</button>
   </div>
