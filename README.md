@@ -1,6 +1,5 @@
 # Tic-Tac-Toe
-An online, multiplayer, highly responsive version of the popular Tic Tac Toe game, packed with exciting new features.
-
+A real-time, cloud-based tic-tac-toe engine with integrated multiplayer functionality, user authentication, and session management.
 
 
 ## What is this?
