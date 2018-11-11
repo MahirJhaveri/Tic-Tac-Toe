@@ -23,3 +23,8 @@ But in order to make it accessible to anyone on the same network, you'll have to
 * **pug** - A templating engine
 * **Socket.io** - A framework used to allow for bi-directional data transfer between the client and the server
 * and many more...
+
+## Screenshots
+![Image of Sign up page](https://raw.githubusercontent.com/MahirJhaveri/Tic-Tac-Toe/master/assets/SignUp%20page.png)
+
+![Image of Game page](https://raw.githubusercontent.com/MahirJhaveri/Tic-Tac-Toe/master/assets/Game%20page.png)
